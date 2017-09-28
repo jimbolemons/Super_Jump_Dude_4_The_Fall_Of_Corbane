@@ -16,7 +16,7 @@ public class rocket : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-         faceMouse();
+        faceMouse();
 
 
 
