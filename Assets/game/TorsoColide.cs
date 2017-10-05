@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TorsoColide : MonoBehaviour {
+	public AudioClip hurt;
+	public AudioClip powerup;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,7 @@ public class TorsoColide : MonoBehaviour {
             {
                 Example2Player.hasPowerUp = false;
                 Destroy(coll.gameObject);
+				AudioSource.PlayClipAtPoint(hurt, transform.position);
             }
 
         }
@@ -33,6 +36,7 @@ public class TorsoColide : MonoBehaviour {
         {
             Example2Player.hasPowerUp = true;
             Destroy(coll.gameObject);
+			AudioSource.PlayClipAtPoint(powerup, transform.position);
         }
 
 

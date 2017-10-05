@@ -10,6 +10,8 @@ public class Example2Player : MonoBehaviour {
     WheelJoint2D wheel;
     public float motorSpeed;
     public float impulseJump;
+	public AudioClip jump;
+	public Vector3 position;
 
     // Use this for initialization
     void Start () {
@@ -32,6 +34,7 @@ public class Example2Player : MonoBehaviour {
         {
             if (isGrounded) { 
             body.AddForce(transform.up * impulseJump, ForceMode2D.Impulse);
+				AudioSource.PlayClipAtPoint(jump, transform.position);
                   }
 
         }
