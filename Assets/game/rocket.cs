@@ -25,9 +25,12 @@ public class rocket : MonoBehaviour {
 
             if (Example2Player.isGrounded == false)
             {
-                if (Example2Player.canJump == true) { 
-                body.AddForce(transform.up * impulseJump, ForceMode2D.Impulse);
-                    Example2Player.canJump = false;
+                if (Example2Player.canJump == true) {
+
+                    if (Example2Player.hasPowerUp == true) {
+                        body.AddForce(transform.up * impulseJump, ForceMode2D.Impulse);
+                        Example2Player.canJump = false;
+                    }
             }
         }
             

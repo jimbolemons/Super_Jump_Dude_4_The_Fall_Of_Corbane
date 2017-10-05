@@ -5,6 +5,7 @@ using UnityEngine;
 public class Example2Player : MonoBehaviour {
     static public bool isGrounded = false;
     static public bool canJump = false;
+    static public bool hasPowerUp = true;
     Rigidbody2D body;
     WheelJoint2D wheel;
     public float motorSpeed;
